@@ -1,4 +1,4 @@
-# bookingwebsite
+# Still a work in progress
 Booking Web Page for the barber 
 
 Clients enter their information into a custom made form. Once the form is successfuly submited, the inputed data will be sent to my barbers email using smtp.
