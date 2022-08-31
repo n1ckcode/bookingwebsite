@@ -47,6 +47,7 @@ var insta = document.getElementById('gram').value;
 function sendEmail(){
 var cut = document.getElementById('service');
 var type= cut.options[cut.selectedIndex].text;
+var email= document.getElementById('email');
 
 
 A();
@@ -93,6 +94,45 @@ A();
 
 
 
+B();
+			Email.send({
+				Host: "smtp.elasticemail.com",
+				Username : "", // enter your smtp server email
+				Password : "", // enter your smtp server password
+				To : "topkidbarber@gmail.com",
+				From : "tt00pingpong@gmail.com",
+				Subject : "Booking Confirmation",
+				Body : "<i>Appointment Request</i>"
+
+                                + "<br><b> First Name:</b> " + document.getElementById('firstname').value
+
+                                + "<br><b> Last Name:</b> " + document.getElementById('lastname').value
+                                + "<br><b> Phone number:</b> " + document.getElementById('phone').value
+                                + "<br><b> Service:</b> " + cut.options[cut.selectedIndex].text
+				+ "<br><b> Instagram:</b> " + "@" + document.getElementById("gram").value
+                                + "<br><b> Appointment date:</b> " + document.getElementById("dates").value
+                                + "<br><b> Appointment time:</b> " + document.getElementById("time").value
+
++ "<br><b> Note to Barber:</b> " + document.getElementById('notes').value
+
+
+
+			})
+			.then(function(message){
+				alert(message)
+			});
+			B();
+		}
+
+		function A() {
+
+
+		}
+
+		function B() {
+			alert("Your appoinment has been received");
+
+		}
 
 
 
