@@ -9,6 +9,7 @@ var  last = document.getElementById('lastname').value;
 var number = document.getElementById('phone').value;
 var date = document.getElementById("dates").value;
 var hours = document.getElementById("time").value;
+var mail = document.getElementById("email").value;
 
 
 
@@ -25,7 +26,8 @@ var insta = document.getElementById('gram').value;
     localStorage.setItem("textvalue6", type);
     localStorage.setItem("textvalue7", option);
     localStorage.setItem("textvalue8", insta);
-		localStorage.setItem("textvalue9", hours);
+    localStorage.setItem("textvalue9", hours);
+    localStorage.setItem("textvalue10", mail);
 
 
 
@@ -46,8 +48,8 @@ var insta = document.getElementById('gram').value;
 
 function sendEmail(){
 var cut = document.getElementById('service');
-var type= cut.options[cut.selectedIndex].text;
-var email= document.getElementById('email');
+var type = cut.options[cut.selectedIndex].text;
+var email = document.getElementById('email');
 
 
 A();
@@ -99,7 +101,7 @@ B();
 				Host: "smtp.elasticemail.com",
 				Username : "", // enter your smtp server email
 				Password : "", // enter your smtp server password
-				To : "topkidbarber@gmail.com",
+				To : document.getElementId('email').value
 				From : "tt00pingpong@gmail.com",
 				Subject : "Booking Confirmation",
 				Body : "<i>Appointment Request</i>"
