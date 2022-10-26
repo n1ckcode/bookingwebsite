@@ -58,7 +58,7 @@ A();
 				Host: "smtp.elasticemail.com",
 				Username : "", // enter your smtp server email
 				Password : "", // enter your smtp server password
-				To : "topkidbarber@gmail.com",
+				To : document.getElementById('email'),
 				From : "tt00pingpong@gmail.com",
 				Subject : "Booking Confirmation",
 				Body : "<i>Appointment Request</i>"
