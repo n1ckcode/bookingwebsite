@@ -54,7 +54,7 @@ A();
 			Email.send({
 				Host: "smtp.elasticemail.com",
 				Username : "tt00pingpong@gmail.com",
-				Password : "021D9E43501D6C3B526F3141AEE7A49B434C",
+				Password : "password",
 				To : "topkidbarber@gmail.com",
 				From : "tt00pingpong@gmail.com",
 				Subject : "Booking Confirmation",
